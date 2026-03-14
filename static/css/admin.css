@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #eaf4ff;
+}
+
+.login-box, .dash {
+  width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #c7ddff;
+}
+
+h2, h1 {
+  color: #0059ff;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px;
+  border: 2px solid #a8c7ff;
+  border-radius: 5px;
+}
+
+button, a {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+  background: #0059ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover, a:hover {
+  background: #003eb8;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.logout {
+  background: #ff3a3a;
+}
+.logout:hover {
+  background: #c90000;
+}

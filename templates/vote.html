@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vote - Smart Voting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Cast Vote</h2>
+    <label>Aadhaar (optional):</label><br>
+    <input id="aadhaar"><br>
+    <div id="candidates"></div>
+    <div id="camera">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    <button id="capture">Capture Photo</button>
+    <div id="preview"></div>
+    <button id="voteBtn">Vote</button>
+    <div id="status"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/vote.js') }}"></script>
+
+</body>
+</html>

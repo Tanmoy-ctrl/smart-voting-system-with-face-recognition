@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Voters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<div class="login-box">
+    <h2>All Voters</h2>
+
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Aadhaar</th>
+            <th>Has Voted</th>
+        </tr>
+
+        {% for v in voters %}
+        <tr>
+            <td>{{ v[0] }}</td>
+            <td>{{ v[1] }}</td>
+            <td>{{ v[2] }}</td>
+            <td>{{ 'Yes' if v[3] else 'No' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('admin_dashboard') }}">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smart Voting System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Voting System</h1>
+        <nav>
+            <a href="{{ url_for('register') }}">Register (Face)</a> |
+            <a href="{{ url_for('vote') }}">Vote</a> |
+            <a href="{{ url_for('results') }}">Results</a> |
+            <a href="{{ url_for('admin_login') }}">Admin</a>
+        </nav>
+        <p>Use face recognition to register and vote securely.</p>
+    </div>
+</body>
+</html>

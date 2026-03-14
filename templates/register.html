@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Register - Smart Voting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Register Voter</h2>
+    <form id="regForm" onsubmit="return false;">
+      <label>Name</label><br>
+      <input id="name" required><br>
+      <label>Aadhaar (ID)</label><br>
+      <input id="aadhaar" required><br>
+      <div id="camera">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+      </div>
+      <button id="capture">Capture Photo</button>
+      <div id="preview"></div>
+      <button id="submitReg">Submit Registration</button>
+    </form>
+    <div id="msg"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+</html>

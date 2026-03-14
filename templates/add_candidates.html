@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Candidate</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+</head>
+<body>
+<div class="login-box">
+    <h2>Add Candidate</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Candidate Name" required>
+        <input type="text" name="party" placeholder="Party Name">
+        <button type="submit">Add Candidate</button>
+    </form>
+    <a href="{{ url_for('admin_dashboard') }}">Back to Dashboard</a>
+
+</div>
+</body>
+</html>

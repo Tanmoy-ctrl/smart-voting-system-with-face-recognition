@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+</head>
+
+<body>
+<div class="dash">
+    <h1>Welcome, Admin</h1>
+    <a href="{{ url_for('admin_add_candidate') }}">Add Candidate</a>
+    <a href="{{ url_for('admin_view_candidates') }}">View Candidates</a>
+    <a href="{{ url_for('admin_view_voters') }}">View Voters</a>
+    <a href="{{ url_for('admin_results') }}">View Results</a>
+    <a href="{{ url_for('admin_logout') }}" class="logout">Logout</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Voting Results</h2>
+
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Candidate Name</th>
+            <th>Party</th>
+            <th>Votes</th>
+        </tr>
+
+        {% for r in results %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] or '-' }}</td>
+            <td>{{ r[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('admin_dashboard') }}">Back to Dashboard</a>
+</div>
+
+</body>
+</html>
